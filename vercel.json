@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/part-a-responsive-ui/index.html"
+    }
+  ]
+}
