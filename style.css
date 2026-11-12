@@ -4,6 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -11,11 +18,16 @@ body {
     line-height: 1.6;
 }
 
-.container { width: 90%; max-width: 1150px; margin: auto; }
+.container { 
+    width: 90%; 
+    max-width: 1150px; 
+    margin: auto;
+ }
 
-.orange-text, h1 span, .logo span { color: #f47b35; }
+.orange-text, h1 span, .logo span { 
+    color: #f47b35;
+ }
 
-/* Navbar */
 .navbar {
     min-height: 80px;
     width: 90%;
@@ -25,8 +37,16 @@ body {
     justify-content: space-between;
 }
 
-.logo { font-size: 23px; font-weight: bold; text-decoration: none; color: #172b4d; }
-.nav-links { display: flex; gap: 30px; }
+.logo { 
+    font-size: 
+    23px; 
+    font-weight:  bold; 
+    text-decoration: none; 
+    color: #172b4d; }
+.nav-links { 
+    display: flex; 
+    gap: 30px; 
+}
 
 .nav-links a {
     text-decoration: none;
@@ -40,7 +60,12 @@ body {
     border-bottom: 3px solid #f47b35;
 }
 
-.signin { border: 1px solid #f47b35; padding: 9px 20px; border-radius: 6px; color: #f47b35; text-decoration: none; }
+.signin {
+     border: 1px solid #f47b35; 
+     padding: 9px 20px; 
+     border-radius: 6px; 
+     color: #f47b35; 
+     text-decoration: none; }
 
 .btn {
     display: inline-block;
@@ -54,7 +79,7 @@ body {
     cursor: pointer;
 }
 
-/* Home */
+
 .hero {
     display: flex;
     align-items: center;
@@ -63,16 +88,43 @@ body {
     padding: 90px 0;
 }
 
-.hero-content, .hero-image { flex: 1; }
-.hero-content h1 { font-size: 48px; line-height: 1.2; margin: 15px 0; }
-.hero-content p { color: #526176; margin-bottom: 25px; }
-.hero-image { display: flex; justify-content: center; }
-.hero-image img { width: 100%; max-width: 430px; height: 300px; object-fit: contain; }
+.hero-content, .hero-image {
+     flex: 1; 
+    }
+.hero-content h1 { 
+    font-size: 48px; 
+    line-height: 1.2; 
+    margin: 15px 0; 
+}
+.hero-content p { 
+    color: #526176; 
+    margin-bottom: 25px; 
+}
+.hero-image { 
+    display: flex; 
+    justify-content: center; 
+}
+.hero-image img { 
+    width: 100%; 
+    max-width: 430px; 
+    height: 300px; 
+    object-fit: contain; 
+}
 
-.journey { background: #f8fafc; padding: 70px 0; }
-.section-heading { text-align: center; margin-bottom: 40px; }
-.section-heading h2 { font-size: 32px; }
-.section-heading p, .step-card p { color: #526176; }
+.journey { 
+    background: #f8fafc; 
+    padding: 70px 0; 
+}
+.section-heading { 
+    text-align: center; 
+    margin-bottom: 40px; 
+}
+.section-heading h2 { 
+    font-size: 32px; 
+}
+.section-heading p, .step-card p { 
+    color: #526176; 
+}
 
 .journey-grid, .course-grid {
     display: flex;
@@ -86,4 +138,96 @@ body {
     padding: 25px;
     border: 1px solid #e5eaf0;
     border-radius: 10px;
+}
+@media screen and (min-width: 1200px) {
+
+    .journey-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .step-card {
+        flex: 1;
+        min-width: 0;
+    }
+
+}
+@media screen and (max-width: 767px) {
+
+   
+    .navbar {
+        width: 92%;
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .signin {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+   
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+        gap: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    
+    .journey {
+        padding: 40px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+    .journey-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .step-card {
+        width: 100%;
+        flex: 1 1 100%;
+        padding: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 13px;
+    }
+
 }
